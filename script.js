@@ -30,7 +30,7 @@ arrayofpimages.forEach(img => {
     });
 });
 
-// checking if add to cart button is clicked.
+// checking if cart button is clicked.
 var cart=document.getElementsByClassName("cart");
 const arrayofcart= Array.from(cart);
 arrayofcart.forEach(product=>{
@@ -39,7 +39,8 @@ arrayofcart.forEach(product=>{
           let dataToAdd= {
     product_image : product.parentElement.parentElement.children[0].src,
     product_title : product.parentElement.parentElement.children[1].children[1].innerText,
-    product_price : product.parentElement.parentElement.children[1].children[3].innerText
+    product_price : product.parentElement.parentElement.children[1].children[3].innerText,
+    product_quantity : 1
     }
     insertToCart.push(JSON.stringify(dataToAdd));
     localStorage.setItem('myCart', JSON.stringify(insertToCart));

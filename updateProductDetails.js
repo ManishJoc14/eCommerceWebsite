@@ -6,7 +6,9 @@ const clickedProductData = JSON.parse(localStorage.getItem('currentProduct'));
 let product_image = document.getElementById('MainImg');
 let product_title = document.getElementById('main_product_title');
 let product_price = document.getElementById('main_product_price');
+let product_quantity = document.getElementById('quantity');
 // manipulating the data
 product_image.src = clickedProductData.product_src;
 product_title.innerText = clickedProductData.product_name;
 product_price.innerText = clickedProductData.product_price;
+product_quantity.value = clickedProductData.product_quantity;
